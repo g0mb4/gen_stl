@@ -1,0 +1,4 @@
+.vscode/
+*.stl
+gen_stl
+
