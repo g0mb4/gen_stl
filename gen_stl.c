@@ -9,7 +9,7 @@
 #include "cylinder.h"
 #include "error.h"
 
-static const char* usage_str = "usage: gen_shape <output_file> <shape> <params>\n\n"
+static const char* usage_str = "usage: gen_stl <shape> <params>\n\n"
                                "shapes:\n"
                                "  cube l mask\n"
                                "  box lx ly lz mask\n"
