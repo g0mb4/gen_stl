@@ -1,6 +1,7 @@
 #include "error.h"
 #include "facet.h"
 
+#include <math.h>
 #include <stdio.h>
 
 vector3 v3(double x, double y, double z)
@@ -10,6 +11,24 @@ vector3 v3(double x, double y, double z)
     v.y = y;
     v.z = z;
     return v;
+}
+
+double v3_length(const vector3* v)
+{
+    double xx = v->x * v->x;
+    double yy = v->y * v->y;
+    double zz = v->z * v->z;
+
+    return sqrt(xx + yy + zz);
+}
+
+void v3_normalise(vector3* v)
+{
+    double l = v3_length(v);
+
+    v->x /= l;
+    v->y /= l;
+    v->z /= l;
 }
 
 static void print_facet(const facet* f)

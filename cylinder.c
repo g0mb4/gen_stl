@@ -73,8 +73,11 @@ facet* cylinder(int* len, double r, double h, double N, int mask)
         }
 
         if (mask & CYLINDER_SIDE) {
-            /* FIXME */
-            vector3 n = v3(1.0, 0.0, 0.0);
+            double xm = (ring[i].x + ring[pair].x) / 2.0;
+            double ym = (ring[i].y + ring[pair].y) / 2.0;
+
+            vector3 n = v3(xm, ym, 0.0);
+            v3_normalise(&n);
 
             list[index].normal = n;
 
