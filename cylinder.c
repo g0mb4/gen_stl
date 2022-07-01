@@ -30,7 +30,7 @@ facet* cylinder(int* len, double r, double h, double N, int mask)
 
     check(ring != NULL, "unable to allocate ring\n");
 
-    double angle_increment = (2 * M_PI) / (double)(N - 1);
+    double angle_increment = (2 * M_PI) / (double)(N);
     for (int i = 0; i < N; ++i) {
         double x = r * cos(i * angle_increment);
         double y = r * sin(i * angle_increment);
