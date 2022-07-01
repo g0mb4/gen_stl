@@ -14,7 +14,7 @@ make
 gen_stl <shape> <params>
 ```
 
-## cube
+### cube
 
 Generates an axis-aligned cube centered at (0, 0, 0).
 
@@ -29,9 +29,9 @@ Generates an axis-aligned cube centered at (0, 0, 0).
     + 16 - LEFT ( x- )
     + 32 - RIGHT ( x+ )
 
-To apply the mask, add the values together.
+Mask can be applied by adding the values together.
 
-## box
+### box
 
 Generates an axis-aligned box centered at (0, 0, 0).
 
@@ -48,9 +48,9 @@ Generates an axis-aligned box centered at (0, 0, 0).
     + 16 - LEFT ( x- )
     + 32 - RIGHT ( x+ )
 
-To apply the mask, add the values together.
+Mask can be applied by adding the values together.
 
-## cylinder
+### cylinder
 
 Generates an axis-aligned cylinder centered at (0, 0, 0).
 
@@ -64,7 +64,7 @@ Generates an axis-aligned cylinder centered at (0, 0, 0).
     + 2 - BOTTOM ( z- )
     + 4 - SIDE
 
-To apply the mask, add the values together.
+Mask can be applied by adding the values together.
 
 ## Examples
 
