@@ -66,6 +66,27 @@ Generates an axis-aligned cylinder centered at (0, 0, 0).
 
 Mask can be applied by adding the values together.
 
+### pipe
+
+Generates an axis-aligned pipe centered at (0, 0, 0).
+
+![pipe](img/pipe.png)
+
++ r1 - inner radius
++ r2 - outer radius
++ h - height
++ N - number of segments
++ mask - sides to generate
+    + 1 - INNER_TOP ( r1, z+ )
+    + 2 - OUTER_TOP ( r2, z+ )
+    + 4 - INNER_BOTTOM ( r1, z- )
+    + 8 - OUTER_BOTTOM ( r2, z- )
+    + 16 - INNER_SIDE ( r1 )
+    + 32 - OUTER_SIDE ( r2 )
+
+Mask can be applied by adding the values together.
+
+
 ## Examples
 
 Creating a unit cube:
