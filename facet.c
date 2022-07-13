@@ -31,6 +31,13 @@ void v3_normalise(vector3* v)
     v->z /= l;
 }
 
+void v3_scale(vector3* v, double s)
+{
+    v->x *= s;
+    v->y *= s;
+    v->z *= s;
+}
+
 static void print_facet(const facet* f)
 {
     printf("  facet normal %e %e %e\n", f->normal.x, f->normal.y, f->normal.z);

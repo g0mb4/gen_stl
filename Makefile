@@ -4,6 +4,7 @@ LDFLAGS = -lm
 
 SRC = box.c\
 	  cylinder.c\
+	  pipe.c\
       error.c\
 	  facet.c\
 	  gen_stl.c
