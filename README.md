@@ -86,6 +86,12 @@ Generates an axis-aligned pipe centered at (0, 0, 0).
 
 Mask can be applied by adding the values together.
 
+### disk
+
+Generates an axis-aligned disk centered at (0, 0, 0).
+
++ r - radius
++ N - number of segments
 
 ## Examples
 

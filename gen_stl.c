@@ -7,15 +7,18 @@
 
 #include "box.h"
 #include "cylinder.h"
-#include "error.h"
+#include "disk.h"
 #include "pipe.h"
+
+#include "error.h"
 
 static const char* usage_str = "usage: gen_stl <shape> <params>\n\n"
                                "shapes:\n"
                                "  cube l mask\n"
                                "  box lx ly lz mask\n"
                                "  cylinder r h N mask\n"
-                               "  pipe r1 r2 h N mask\n";
+                               "  pipe r1 r2 h N mask"
+                               "  disk r N\n";
 
 bool strequ(const char* s1, const char* s2)
 {
@@ -92,6 +95,13 @@ int main(int argc, char** argv)
         int m = string2int(argv[6]);
 
         facets = pipe(&len, r1, r2, h, N, m);
+    } else if (strequ(shape, "disk")) {
+        check(argc == 4, "%s", usage_str);
+
+        double r = string2double(argv[2]);
+        int N = string2int(argv[3]);
+
+        facets = disk(&len, r, N);
     } else {
         check(false, "unknown shape: '%s'\n", shape);
     }
